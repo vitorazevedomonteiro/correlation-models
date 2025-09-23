@@ -26,7 +26,7 @@ def SpatialCorrGH08_SA(h, t, uncertainty='yes'):
     else:
         print("Error")
 
-
+# Auxiliar correlation model for a Cross-Spatial correlation model calculated using Markov method
 def corrBC06xy(T_a, T_b):
 
     T_min, T_max = min(T_a, T_b), max(T_a, T_b)
@@ -52,4 +52,5 @@ def SpatialCrossCorrGH08(t1, t2, h):
     rho = corrBC06xy(t1, t2) * SpatialCorrGH08_SA(h, t_max)
 
     return rho
+
 
