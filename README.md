@@ -9,7 +9,7 @@ Monteiro, V.A and O’Reilly, G.J. (2025) ‘A review of ground motion correlati
 
 # Models currently provided:
 
-```python
+
 
 |        Function        |             Database                |  Spatial Correlation  |   Non-Spatial Correlation  |    Intensity Measures     |  Reference                    |
 |------------------------|-------------------------------------|-----------------------|----------------------------|---------------------------|-------------------------------|
@@ -23,9 +23,9 @@ Monteiro, V.A and O’Reilly, G.J. (2025) ‘A review of ground motion correlati
 |   SokolovEtAl10        |  TSMP network in Taiwan             |           X           |             -              |    PGA                    | Sokolov et al. [2010]         |
 |   espositoiervolino11  |  ESMD and ITACA databases           |           X           |             -              |    PGA, PGV               | Esposito and Iervolino [2011] |
 |   espositoiervolino12  |  ESMD and ITACA databases           |           X           |             -              |    Sa(T)                  | Esposito and Iervolino [2012] |
-|   bradley11a           |  NGA-W1 database                    |           -           |             X              |    D_s{xy}                       |                       |
+|   bradley11a           |  NGA-W1 database                    |           -           |             X              |    D_{sxy}                       |                       |
 |                        |                    |                       |                            |                           |                       |
 
-```
+
 
 
