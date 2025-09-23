@@ -1,7 +1,7 @@
 """
 Created by Vitor Monteiro, 23/0/2025
 
-Compute spatial correlation coefficients for Sa(T) and PGA, for
+Compute correlation and spatial correlation coefficients for Sa(T) and PGA, for
 Californian earthquakes for periods between [0.1-3.0]s.
 
 For more details please see: 
@@ -13,6 +13,9 @@ Bulletin of the Seismological Society of America, 98(1), 354–365. https://doi.
 import numpy as np
 
 def SpatialCorrGH08_SA(h, t, uncertainty='yes'):
+    if not (0.1 <= t <= 3.0):
+        raise ValueError(f"t = {t} is outside the valid range [0.1, 3.0].")
+        
     if uncertainty == 'no':
         alpha = -0.16 * np.log(t) + 0.62
         beta = 0.5
@@ -25,6 +28,21 @@ def SpatialCorrGH08_SA(h, t, uncertainty='yes'):
         return rho
     else:
         print("Error")
+
+def SpatialcorrGH08_PGA(h, uncertainty='yes'):
+    if uncertainty == 'no':
+        alpha = 0.93
+        beta = 0.49
+        rho = np.exp(-alpha*(h**beta))
+        return rho
+    elif uncertainty == 'yes':
+        alpha = 0.9
+        beta = 0.48
+        rho = np.exp(-alpha*(h**beta))
+        return rho
+    else:
+        print("Error")
+
 
 # Auxiliar correlation model for a Cross-Spatial correlation model calculated using Markov method
 def corrBC06xy(T_a, T_b):
@@ -52,5 +70,6 @@ def SpatialCrossCorrGH08(t1, t2, h):
     rho = corrBC06xy(t1, t2) * SpatialCorrGH08_SA(h, t_max)
 
     return rho
+
 
 
