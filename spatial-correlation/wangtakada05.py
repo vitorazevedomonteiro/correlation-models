@@ -1,5 +1,5 @@
 """
-Created by Vitor Monteiro, 23/0/2025
+Created by Vitor Monteiro, 23/09/2025
 
 Compute spatial correlation coefficients for PGV, for Taiwan and Japanese earthquakes.
 
@@ -42,5 +42,6 @@ def SpatialcorrWT05(h, gmm, earthquake):
 
     rho = np.exp(-(h)/b)
     return rho
+
 
 
