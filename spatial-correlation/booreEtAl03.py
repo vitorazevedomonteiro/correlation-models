@@ -1,5 +1,5 @@
 """
-Created by Vitor Monteiro, 5/10/2021
+Created by Vitor Monteiro, 23/09/2025
 
 Compute spatial correlation coefficients for PGA from California 1994 earthquake.
 
@@ -14,4 +14,5 @@ import numpy as np
 def SpatialcorrB03(h):
     rho = 1 - (1 - np.exp(-np.sqrt(0.6*h)))**2
     return rho
+
 
