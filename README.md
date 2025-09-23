@@ -5,7 +5,7 @@ All the citations of each model presented in this repository are included within
 For a more detailed review of the ground motion correlation modelling for regional seismic risk analysis please see the paper cited below:
 
 # Reference
-Monteiro, V.A and O’Reilly, G.J. (2025) ‘A review of ground motion correlation modelling for regional seismic risk analysis’, (Coming Soon)
+Monteiro, V.A. and O’Reilly, G.J. (2025) ‘A review of ground motion correlation modelling for regional seismic risk analysis’, (Under review)
 
 # Models currently provided:
 
