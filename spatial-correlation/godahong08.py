@@ -57,7 +57,7 @@ def corrBC06xy(T_a, T_b):
     inner_term = np.clip(inner_term, -np.pi, np.pi)
 
     rho = (0.79 - 0.023 * np.log(np.sqrt(T_b*T_a))) * (1 - np.cos(inner_term))
-    return np.clip(rho, -1, 1)  # Ensures correlation is within [-1,1]
+    return rho  
 
 
 def SpatialCrossCorrGH08(t1, t2, h):
@@ -70,6 +70,7 @@ def SpatialCrossCorrGH08(t1, t2, h):
     rho = corrBC06xy(t1, t2) * SpatialCorrGH08_SA(h, t_max)
 
     return rho
+
 
 
 
