@@ -2,7 +2,7 @@
 Created by Vitor Monteiro, 23/09/2025
 
 Compute cross-correlation coefficients between Sa(T)-Duration
-for NGA-W1 database database for periods between [0.01-10.0]s.
+for NGA-W1 database for periods between [0.01-10.0]s.
 
 For more details please see: 
 Bradley, B. A. (2011). 
@@ -45,3 +45,4 @@ def corrB11(T, duration='Ds575'):
             rho = 0.23 + (np.log(T / 6.00) / np.log(10.00 / 6.00)) * (0.02 - 0.23)
         return rho
         
+
