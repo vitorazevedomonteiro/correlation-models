@@ -9,21 +9,23 @@ Monteiro, V.A and O’Reilly, G.J. (2025) ‘A review of ground motion correlati
 
 # Models currently provided:
 
-|        Function      |       Database               |  Spatial Correlation  |   Non-Spatial Correlation  |         Reference         |
-|----------------------|------------------------------|-----------------------|----------------------------|---------------------------|
-|   booreEtAl2003.py   |  1994 Northridge earthquake  |           X           |             -              |     Boore et al. [2003]   |
-|   wangtakada2005.py  |  Taiwan and Japanese earthquakes    |                       |                            |                           |
-|                      |                    |                       |                            |                           |
-|                      |                    |                       |                            |                           |
-|                      |                    |                       |                            |                           |
-|                      |                    |                       |                            |                           |
-|                      |                    |                       |                            |                           |
-|                      |                    |                       |                            |                           |
-|                      |                    |                       |                            |                           |
-|                      |                    |                       |                            |                           |
-|                      |                    |                       |                            |                           |
-|                      |                    |                       |                            |                           |
-|                      |                    |                       |                            |                           |
-|                      |                    |                       |                            |                           |
+```python
+
+|        Function        |             Database                |  Spatial Correlation  |   Non-Spatial Correlation  |    Intensity Measures     |  Reference                    |
+|------------------------|-------------------------------------|-----------------------|----------------------------|---------------------------|-------------------------------|
+|   booreEtAl03.py       |  1994 Northridge earthquake         |           X           |             -              |    PGA                    | Boore et al. [2003]           |
+|   wangtakada05.py      |  Taiwan and Japanese earthquakes    |           X           |             -              |    PGV                    | Wang and Takada [2005]        |
+|   bakercornell06.py    |  PEER Strong Motion (2000)          |           -           |             X              |    Sa(T)                  | Baker and Cornell [2006]      |
+|   godahong08           |  Chi-Chi and California earthquakes |           X           |             X              |    PGA, PGV, Sa(T)        | Goda and Hong [2008]          |
+|   godaatkinson09       |  K-net and KiK-net databases        |           X           |             X              |    PGA, PGV, Sa(T)        | Goda and Atkinson [2009]      |
+|   bakerjayaram08       |  NGA-W1 database                    |           -           |             X              |    Sa(T)                  | Baker and Jayaram [2008]      |
+|   jayarambaker09       |  NGA-W1 database                    |           X           |             -              |    Sa(T)                  | Jayaram and Baker [2009]      |
+|   SokolovEtAl10        |  TSMP network in Taiwan             |           X           |             -              |    PGA                    | Sokolov et al. [2010]         |
+|   espositoiervolino11  |  ESMD and ITACA databases           |           X           |             -              |    PGA, PGV               | Esposito and Iervolino [2011] |
+|   espositoiervolino12  |  ESMD and ITACA databases           |           X           |             -              |    Sa(T)                  | Esposito and Iervolino [2012] |
+|   bradley11a           |  NGA-W1 database                    |           -           |             X              |    D_s{xy}                       |                       |
+|                        |                    |                       |                            |                           |                       |
+
+```
 
 
