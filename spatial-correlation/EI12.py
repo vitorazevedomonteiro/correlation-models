@@ -14,7 +14,7 @@ https://doi.org/10.1785/0120120068
 import numpy as np
 
 # T=0.1s to T=2.85s
-def SpatialCorrEI11(T, h, database=1):
+def SpatialCorrEI12(T, h, database=1):
     if not (0.1 <= T <= 2.0):
         raise ValueError(f"T = {T} is outside the valid range [0.1, 2.0].")
     
@@ -27,3 +27,4 @@ def SpatialCorrEI11(T, h, database=1):
         rho = np.exp(-(3*h)/b)
         return rho
         
+
