@@ -1,5 +1,3 @@
-import numpy as np
-
 """
 Created by Vitor Monteiro, 23/0/2025
 
@@ -10,6 +8,7 @@ Wang, M., & Takada, T. (2005). Macrospatial Correlation Model of Seismic Ground 
 Earthquake Spectra, 21(4), 1137–1156. https://doi.org/10.1193/1.2083887
 """
 
+import numpy as np
 
 def correlationWT05(h, gmm, earthquake):
     if gmm == 'annaka':
@@ -43,3 +42,4 @@ def correlationWT05(h, gmm, earthquake):
 
     rho = np.exp(-(h)/b)
     return rho
+
