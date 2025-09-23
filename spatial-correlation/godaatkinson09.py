@@ -35,6 +35,7 @@ interps = [interp1d(periods, params[:, i], kind='linear', fill_value='extrapolat
 
 
 def SpatialcorrGA09(T, h):
+    # In case of PGA, please select T=0
     
     if not (0.0 <= T <= 5.0):
         raise ValueError(f"T = {T} is outside the valid range [0, 5.0].")
@@ -62,16 +63,17 @@ def corrBC06xy(T_a, T_b):
     return rho 
 
 
-def SpatialCrossCorrGA09(h, t1, t2):
+def SpatialCrossCorrGA09(t1, t2, h):
     
-    if not (0.0 <= t1 <= 5.0):
-        raise ValueError(f"t1 = {t1} is outside the valid range [0, 5.0].")
-    if not (0.0 <= t2 <= 5.0):
-        raise ValueError(f"t1 = {t2} is outside the valid range [0, 5.0].")
+    if not (0.0 < t1 <= 5.0):
+        raise ValueError(f"t1 = {t1} is outside the valid range ]0, 5.0].")
+    if not (0.0 < t2 <= 5.0):
+        raise ValueError(f"t1 = {t2} is outside the valid range ]0, 5.0].")
     
     t_max = max(t1, t2)
     rho = corrBC06xy(t1, t2) * SpatialcorrGA09(h, t_max)
 
     return rho
+
 
 
