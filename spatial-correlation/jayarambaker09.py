@@ -14,7 +14,7 @@ https://doi.org/10.1002/eqe.922
 
 import numpy as np
 
-def correlationJB09(T, h, vs30=1):
+def SpatialcorrJB09(T, h, vs30=1):
     # Use T=0 for PGA
     
     if vs30 == 1:  # vs30 clustering 
@@ -28,3 +28,4 @@ def correlationJB09(T, h, vs30=1):
         else:
             b = 22.0 + 3.7 * T
     return np.exp(-(3 * h) / b)
+
