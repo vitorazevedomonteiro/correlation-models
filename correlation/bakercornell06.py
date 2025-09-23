@@ -14,7 +14,7 @@ Multicomponent Ground Motions. Bulletin of the Seismological Society of America,
 import numpy as np
 
 
-def correlationBC06xx(T_a, T_b):
+def corrBC06xx(T_a, T_b):
     
     # Check valid input range
     if not (0.05 <= T_a <= 5.0):
@@ -35,7 +35,7 @@ def correlationBC06xx(T_a, T_b):
     return rho  
 
 
-def correlationBC06xy(T_a, T_b):
+def corrBC06xy(T_a, T_b):
 
     # Check valid input range
     if not (0.05 <= T_a <= 5.0):
@@ -55,5 +55,4 @@ def correlationBC06xy(T_a, T_b):
     rho = (0.79 - 0.023 * np.log(np.sqrt(T_b*T_a))) * (1 - np.cos(inner_term))
     return rho  
 
-corr = correlationBC06xx(0.05, 5.2)
-print(corr)
+
