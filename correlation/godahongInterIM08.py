@@ -11,7 +11,7 @@ Bulletin of the Seismological Society of America, 98(1), 354–365. https://doi.
 
 import numpy as np
 
-def correlationGH08_SA(t, h, uncertainty='yes'):
+def SpatialcorrGH08_SA(t, h, uncertainty='yes'):
     if not (0.1 <= t <= 3.0):
         raise ValueError(f"t = {t} is outside the valid range [0.1, 3.0].")
     
@@ -29,7 +29,7 @@ def correlationGH08_SA(t, h, uncertainty='yes'):
         print("Error")
 
 
-def correlationGH08_PGA(h, uncertainty='yes'):
+def SpatialcorrGH08_PGA(h, uncertainty='yes'):
     if uncertainty == 'no':
         alpha = 0.93
         beta = 0.49
@@ -42,3 +42,4 @@ def correlationGH08_PGA(h, uncertainty='yes'):
         return rho
     else:
         print("Error")
+
