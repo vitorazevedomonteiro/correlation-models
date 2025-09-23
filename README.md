@@ -9,5 +9,21 @@ Monteiro, V.A and O’Reilly, G.J. (2025) ‘A review of ground motion correlati
 
 # Models currently provided:
 
-| Function             | Region             | Predicted metric      | Reference                          |
-|----------------------|--------------------|-----------------------|------------------------------------|
+|        Function      |       Database               |  Spatial Correlation  |   Non-Spatial Correlation  |         Reference         |
+|----------------------|------------------------------|-----------------------|----------------------------|---------------------------|
+|   BooreEtAl2003.py   |  1994 Northridge earthquake  |           X           |             -              |     Boore et al. [2003]   |
+|                      |                    |                       |                            |                           |
+|                      |                    |                       |                            |                           |
+|                      |                    |                       |                            |                           |
+|                      |                    |                       |                            |                           |
+|                      |                    |                       |                            |                           |
+|                      |                    |                       |                            |                           |
+|                      |                    |                       |                            |                           |
+|                      |                    |                       |                            |                           |
+|                      |                    |                       |                            |                           |
+|                      |                    |                       |                            |                           |
+|                      |                    |                       |                            |                           |
+|                      |                    |                       |                            |                           |
+|                      |                    |                       |                            |                           |
+
+
