@@ -16,7 +16,9 @@ import numpy as np
 
 def SpatialcorrJB09(T, h, vs30=1):
     # Use T=0 for PGA
-    
+    if not (0 <= T <= 10.0):
+        raise ValueError(f"T = {T} is outside the valid range [0, 10.0].")
+        
     if vs30 == 1:  # vs30 clustering 
         if T < 1:
             b = 8.5 + 17.2 * T
@@ -28,4 +30,5 @@ def SpatialcorrJB09(T, h, vs30=1):
         else:
             b = 22.0 + 3.7 * T
     return np.exp(-(3 * h) / b)
+
 
