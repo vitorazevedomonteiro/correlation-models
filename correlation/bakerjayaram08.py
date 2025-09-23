@@ -12,7 +12,7 @@ Earthquake Spectra, 24(1), 299–317. https://doi.org/10.1193/1.2857544
 
 import numpy as np
 
-def correlation_bj08(T1, T2):
+def corrBJ08(T1, T2):
 
     T_min, T_max = min(T1, T2), max(T1, T2)
 
@@ -42,5 +42,6 @@ def correlation_bj08(T1, T2):
         rho = C4
 
     return rho 
+
 
 
