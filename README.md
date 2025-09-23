@@ -12,9 +12,10 @@ Monteiro, V.A and O’Reilly, G.J. (2025) ‘A review of ground motion correlati
 
 
 |        Function           |             Database                            |  Spatial Correlation  |   Non-Spatial Correlation  |    Intensity Measures                               |  Reference                          |
+|                           |                                                 |  Inter-IM | Intra-IM  |                            |                                                     |                                     |
 |---------------------------|-------------------------------------------------|-----------------------|----------------------------|-----------------------------------------------------|-------------------------------------|
-|   booreEtAl03.py          |  1994 Northridge earthquake                     |           X           |             -              |    PGA                                              | Boore et al. [2003]                 |
-|   wangtakada05.py         |  Taiwan and Japanese earthquakes                |           X           |             -              |    PGV                                              | Wang and Takada [2005]              |
+|   booreEtAl03.py          |  1994 Northridge earthquake                     |           |    X      |             -              |    PGA                                              | Boore et al. [2003]                 |
+|   wangtakada05.py         |  Taiwan and Japanese earthquakes                |           |    X      |             -              |    PGV                                              | Wang and Takada [2005]              |
 |   bakercornell06.py       |  PEER Strong Motion (2000)                      |           -           |             X              |    Sa(T)                                            | Baker and Cornell [2006]            |
 |   godahong08.py           |  Chi-Chi and California earthquakes             |           X           |             X              |    PGA, PGV, Sa(T)                                  | Goda and Hong [2008]                |
 |   godaatkinson09.py       |  K-net and KiK-net databases                    |           X           |             X              |    PGA, PGV, Sa(T)                                  | Goda and Atkinson [2009]            |
