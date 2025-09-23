@@ -1,5 +1,5 @@
 """
-Created by Vitor Monteiro, 23/0/2025
+Created by Vitor Monteiro, 23/09/2025
 
 Compute correlation and spatial correlation coefficients for Sa(T) and PGA, for
 Californian earthquakes for periods between [0.1-3.0]s.
@@ -70,6 +70,7 @@ def SpatialCrossCorrGH08(t1, t2, h):
     rho = corrBC06xy(t1, t2) * SpatialCorrGH08_SA(h, t_max)
 
     return rho
+
 
 
 
