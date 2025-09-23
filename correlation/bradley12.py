@@ -2,7 +2,7 @@
 Created by Vitor Monteiro, 23/09/2025
 
 Compute cross-correlation coefficients between Sa(T)-PGA and Sa(T)-PGV
-for NGA-W1 database database for periods between [0.01-10.0]s.
+for NGA-W1 database for periods between [0.01-10.0]s.
 
 For more details please see: 
 Bradley, B. A. (2012). 
@@ -36,3 +36,4 @@ def corrB12(T, im = 'PGA'):
             rho = ((0.76+0.70)/2)-((0.76-0.70)/2)*np.tanh(3.2*np.log(T/5.0))
         return rho 
           
+
