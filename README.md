@@ -38,8 +38,8 @@ Monteiro, V.A. and O’Reilly, G.J. (2025) ‘A review of ground motion correlat
 |   duning21.py             |  NGA-W2                                         |     X     |     -     |             -              |    Sa(T), PGA, PGV, Duration                        | Du and Ning [2021](https://doi.org/10.1177/8755293020952442)                  |
 |   schiappapietraEtAl22.py |  ESM database                                   |     -     |     X     |             -              |    Sa(T)                                            | [Schiappapietra et al [2022](https://doi.org/10.1007/s10518-022-01413-z)|
 |   aldeaEtAl22             |  Chilean earthquakes                            |     -     |     X     |             -              |    Sa(T), PGA                                       | [Aldea et al. [2022](https://doi.org/10.1002/eqe.3674)                  |
-|   aristeidouEtAl24        |  NGA-W2 database                                |     -     |     -     |             X              |    Sa(T), PGA, PGV, PGD, Duration, FIV3, Saavg(T)   | Aristeidou et al. [2024](https://doi.org/10.1177/87552930241270)            |
-|   MonteiroEtAl24        |  NGA-W2 and ESM database                          |     X     |     -     |             -              |    Sa(T), PGA, PGV, FIV3, Saavg(T)                  | Monteiro V.A. et al. [2025] (under revision)            |
+|   aristeidouEtAl24 (see https://github.com/Savvinos-Aristeidou/ANN_correlation_models.git)       |  NGA-W2 database                                |     -     |     -     |             X              |    Sa(T), PGA, PGV, PGD, Duration, FIV3, Saavg(T)   | Aristeidou et al. [2024](https://doi.org/10.1177/87552930241270)            |
+|   MonteiroEtAl24 (see https://github.com/vitorazevedomonteiro/cross-spatial-correlation-model.git)       |  NGA-W2 and ESM database                          |     X     |     -     |             -              |    Sa(T), PGA, PGV, FIV3, Saavg(T)                  | Monteiro V.A. et al. [2025] (under revision)            |
 
 
 
