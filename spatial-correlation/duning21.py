@@ -110,7 +110,7 @@ def get_pc(label):
 
 
 
-def DuNing2021(IM1, IM2, h):
+def   CrossSpatialCorrDN21(IM1, IM2, h):
     # Interpolated PCs
     pc1 = get_pc(IM1)
     pc2 = get_pc(IM2)
@@ -136,3 +136,4 @@ def DuNing2021(IM1, IM2, h):
     C_h_other = (C_h / np.sqrt(Cii_0 * Cjj_0))
 
     return C_h_other
+
