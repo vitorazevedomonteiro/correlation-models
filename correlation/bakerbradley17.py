@@ -249,3 +249,30 @@ corr_matrix = np.array([
         0.76784, 0.77265, 0.776, 0.7853, 0.79484, 0.80212, 0.80317, 0.80332, 0.80537, 0.80218, 0.79852, 0.79762, 0.79412, 0.78843, 0.77962, 0.77644, 0.77847, 0.77796, 0.77156, 0.7688, 0.75983, 0.75084, 0.74601, 0.73685, 0.73244, 0.72713, 0.72646, 0.72288, 0.71446, 0.70776, 0.70596, 0.70288, 0.69918, 0.69421, 0.68188, 0.67423, 0.67331, 0.67741, 0.67709, 0.6713, 0.66891, 0.66392, 0.65994, 0.65313, 0.64931, 0.64195, 0.66536, 0.66052, 0.65518, 0.64594, 0.65365, -0.2884, -0.25223, 0.65361, 1],
 ])
 
+
+# Convert IMs labels to numeric values for interpolation
+def im_to_numeric(im_label):
+    if im_label.startswith('SA('):
+        return float(im_label[3:-1])
+    elif im_label == 'PGA':
+        return 1000.0  # Example placeholder numeric value
+    elif im_label == 'PGV':
+        return 2000.0  # Example placeholder numeric value
+    elif im_label.startswith('DS'):
+        return float(im_label[2:])  # e.g., 'DS575' -> 575
+    else:
+        raise ValueError(f"Unknown IM label: {im_label}")
+
+# Create numeric arrays for interpolation
+IM_numeric = np.array([im_to_numeric(im) for im in IMs])
+
+# Create the interpolator
+interpolator = RegularGridInterpolator((IM_numeric, IM_numeric), corr_matrix, bounds_error=False, fill_value=None)
+
+# Define the function
+def corrBB17(im1, im2):
+    x = im_to_numeric(im1)
+    y = im_to_numeric(im2)
+    return interpolator([[x, y]])[0]
+
+
