@@ -1,3 +1,16 @@
+"""
+Created by Vitor Monteiro, 23/09/2025
+
+Compute correlation coefficients for Sa(T) and PGA, for
+Europe and the Middle East earthquakes for periods between [0.0-4.0]s.
+
+For more details please see: 
+Akkar, S., Sandıkkaya, M. A., & Ay, B. Ö. (2014). 
+Compatible ground-motion prediction equations for damping scaling factors and 
+vertical-to-horizontal spectral amplitude ratios for the broader Europe region.
+Bulletin of Earthquake Engineering, 12(1), 517–547. https://doi.org/10.1007/s10518-013-9537-1
+"""
+
 import numpy as np
 from scipy.interpolate import RegularGridInterpolator
 
@@ -61,4 +74,5 @@ def corrA14(T1, T2):
         raise ValueError(f"T2={T2} is outside the valid range [{periods.min()}, {periods.max()}]")
 
     return corr_interpolator([[T1, T2]])[0]
+
     
