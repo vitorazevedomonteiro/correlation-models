@@ -19,11 +19,4 @@ def corrC13(T1, T2):
     return rho  
 
 
-def correlation_c13_zz(T_a, T_b):
-    """Compute the correlation coefficient ensuring symmetry."""
-    T_min, T_max = min(T_a, T_b), max(T_a, T_b)  # Ensure correct assignment
-    rho = 1 - ((-0.0815+0.0677*np.log10(T_min)+0.0063*(np.log10(T_max))**2) /
-               (1+0.1422*np.log10(T_max)-0.2447*(np.log10(T_min))**2)) * np.log(T_min/T_max)
-    return np.clip(rho, -1, 1)  # Ensure correlation remains within [-1,1]
-
 
