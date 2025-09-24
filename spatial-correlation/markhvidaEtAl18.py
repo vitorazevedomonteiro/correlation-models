@@ -58,7 +58,7 @@ def get_pc(T):
     return np.array([f(T) for f in pcs_interp])
 
 
-def markhvidaEtAl2018(T1, T2, h):
+def CrossSpatialCorrMCB18(T1, T2, h):
     # Interpolated PCs
     pc1 = get_pc(T1)
     pc2 = get_pc(T2)
@@ -85,3 +85,4 @@ def markhvidaEtAl2018(T1, T2, h):
     C_h_other = (C_h / np.sqrt(Cii_0 * Cjj_0))
 
     return C_h_other
+
