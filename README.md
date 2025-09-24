@@ -45,5 +45,5 @@ Use "get_spatial_correlation.py" to get inter and/or intra-IM spatial correlatio
 |   aristeidouEtAl24 (see https://github.com/Savvinos-Aristeidou/ANN_correlation_models.git)       |  NGA-W2 database                                |     -     |     -     |             X              |    Sa(T), PGA, PGV, PGD, Duration, FIV3, Saavg(T)   | Aristeidou et al. [2024](https://doi.org/10.1177/87552930241270)            |
 |   MonteiroEtAl24 (see https://github.com/vitorazevedomonteiro/cross-spatial-correlation-model.git)       |  NGA-W2 and ESM database                          |     X     |     -     |             -              |    Sa(T), PGA, PGV, FIV3, Saavg(T)                  | Monteiro V.A. et al. [2025] (under revision)            |
 
-
+Note that inter-IM spatial models also capture intra-IM spatial correlation by definition.
 
