@@ -10,11 +10,13 @@ Compatible ground-motion prediction equations for damping scaling factors and
 vertical-to-horizontal spectral amplitude ratios for the broader Europe region.
 Bulletin of Earthquake Engineering, 12(1), 517–547. https://doi.org/10.1007/s10518-013-9537-1
 """
+# flake8: noqa: E501
 
 import numpy as np
 from scipy.interpolate import RegularGridInterpolator
 
-periods = np.array([0, 0.01, 0.02, 0.03, 0.04, 0.05, 0.075, 0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 4.0])
+periods = np.array([0, 0.01, 0.02, 0.03, 0.04, 0.05, 0.075, 0.1,
+                   0.15, 0.2, 0.3, 0.4, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 4.0])
 
 corr_matrix = np.array([
     [1, 0.99966, 0.99784, 0.99198, 0.98153, 0.96686, 0.93427, 0.93426, 0.91839,
@@ -57,22 +59,24 @@ corr_matrix = np.array([
         0.30679, 0.35461, 0.42548, 0.53024, 0.63531, 0.73478, 0.79894, 0.931002, 1]
 ])
 
-
-
 corr_interpolator = RegularGridInterpolator(
-    (periods, periods), corr_matrix, method="linear", bounds_error=False, fill_value=None
+    (periods, periods), corr_matrix, method="linear", bounds_error=False,
+    fill_value=None
 )
+
 
 def corrA14(T1, T2):
     # Use T=0 for PGA
-    
+
     T1, T2 = float(T1), float(T2)
 
     if not (periods.min() <= T1 <= periods.max()):
-        raise ValueError(f"T1={T1} is outside the valid range [{periods.min()}, {periods.max()}]")
+        raise ValueError(
+            f"T1={T1} is outside the valid range ["
+            f"{periods.min()}, {periods.max()}]")
     if not (periods.min() <= T2 <= periods.max()):
-        raise ValueError(f"T2={T2} is outside the valid range [{periods.min()}, {periods.max()}]")
+        raise ValueError(
+            f"T2={T2} is outside the valid range "
+            f"[{periods.min()}, {periods.max()}]")
 
     return corr_interpolator([[T1, T2]])[0]
-
-    

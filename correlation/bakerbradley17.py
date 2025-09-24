@@ -6,13 +6,12 @@ NGA-West2 for periods between [0.01-10.0]s.
 
 For more details please see: 
 Baker, J. W., & Bradley, B. A. (2017). Intensity Measure Correlations Observed
-in the NGA-West2 Database, and Dependence of Correlations on Rupture and Site Parameters.
+in the NGA-West2 Database, and Dependence of Correlations on Rupture and
+Site Parameters.
 Earthquake Spectra, 33(1), 145–156. https://doi.org/10.1193/060716eqs095m
 """
+# flake8: noqa: E501
 
-
-
-import re
 import numpy as np
 from scipy.interpolate import RegularGridInterpolator
 
@@ -263,16 +262,17 @@ def im_to_numeric(im_label):
     else:
         raise ValueError(f"Unknown IM label: {im_label}")
 
+
 # Create numeric arrays for interpolation
 IM_numeric = np.array([im_to_numeric(im) for im in IMs])
 
 # Create the interpolator
-interpolator = RegularGridInterpolator((IM_numeric, IM_numeric), corr_matrix, bounds_error=False, fill_value=None)
+interpolator = RegularGridInterpolator(
+    (IM_numeric, IM_numeric), corr_matrix, bounds_error=False, fill_value=None)
+
 
 # Define the function
 def corrBB17(im1, im2):
     x = im_to_numeric(im1)
     y = im_to_numeric(im2)
     return interpolator([[x, y]])[0]
-
-
