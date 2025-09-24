@@ -1,5 +1,5 @@
 # flake8: noqa
-
+import inspect
 from .akkarEtAl14 import corrA14
 from .bakerbradley17 import corrBB17
 from .bakercornell06 import corrBC06xx, corrBC06xy
@@ -22,3 +22,12 @@ ALIASES = {
     "huanggalasso19_sa_im": corrHG19_SaIM,
     "huanggalasso19_sa_sa": corrHG19_SaSa,
 }
+
+
+def select_func_args(function):
+    sig = inspect.signature(function)
+
+    func_params = [param.name for param in sig.parameters.values()
+                   if param.name != 'self']
+
+    return func_params
