@@ -1,7 +1,7 @@
-from correlation import ALIASES
+from spatial_correlation import ALIASES
 
 
-def get_correlation(method: str, **kwargs):
+def get_spatial_correlation(method: str, **kwargs):
     method = method.lower()
 
     model = ALIASES[method]
@@ -12,7 +12,7 @@ def get_correlation(method: str, **kwargs):
         return rho
 
     except TypeError:
-        from correlation import select_func_args
+        from spatial_correlation import select_func_args
 
         args = select_func_args(model)
 
@@ -22,10 +22,10 @@ def get_correlation(method: str, **kwargs):
         )
 
 # Example 1
-rho = get_correlation("akkaretal14", T1=3, T2=0.5)
+rho = get_spatial_correlation("jayarambaker09", T=3, h=20, vs30=1)
 print("Correlation:", rho)
 
 
 # Example 2
-rho = get_correlation("bakerbradley17", im1='SA(0.2)', im2='PGV')
+rho = get_spatial_correlation("markhvidaetal18", T1=0.1, T2=3, h=20)
 print("Correlation:", rho)

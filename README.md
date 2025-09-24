@@ -2,10 +2,16 @@
 This repository provides python scripts to calculate different correlation coefficients. Here it can be found some inter/intra-IM non-spatial correlation models and inter/intra-IM spatial correlation models.
 All the citations of each model presented in this repository are included within the python scripts and showed below.
 
+
+
 For a more detailed review of the ground motion correlation modelling for regional seismic risk analysis please see the paper cited below:
 
 # Reference
 Monteiro, V.A. and O’Reilly, G.J. (2025) ‘A review of ground motion correlation modelling for regional seismic risk analysis’, (Under review)
+
+# How to use
+Use "get_correlation.py" to get non-spatial correlation coefficients from several models. Inside you can find two simple example of how to use it.
+Use "get_spatial_correlation.py" to get inter and/or intra-IM spatial correlation coefficients from several models. Inside you can find two simple example of how to use it.
 
 # Models currently provided:
 

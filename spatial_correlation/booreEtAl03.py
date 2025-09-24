@@ -11,7 +11,7 @@ Boore, D. M. (2003). Estimated Ground Motion From the 1994 Northridge, Californi
 
 import numpy as np
 
-def SpatialcorrB03(h):
+def SpatialCorrB03(h):
     rho = 1 - (1 - np.exp(-np.sqrt(0.6*h)))**2
     return rho
 

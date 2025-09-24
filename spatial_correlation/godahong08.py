@@ -29,7 +29,7 @@ def SpatialCorrGH08_SA(h, t, uncertainty='yes'):
     else:
         print("Error")
 
-def SpatialcorrGH08_PGA(h, uncertainty='yes'):
+def SpatialCorrGH08_PGA(h, uncertainty='yes'):
     if uncertainty == 'no':
         alpha = 0.93
         beta = 0.49

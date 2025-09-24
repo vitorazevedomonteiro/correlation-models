@@ -14,7 +14,7 @@ https://doi.org/10.1002/eqe.922
 
 import numpy as np
 
-def SpatialcorrJB09(T, h, vs30=1):
+def SpatialCorrJB09(T, h, vs30=1):
     # Use T=0 for PGA
     if not (0 <= T <= 10.0):
         raise ValueError(f"T = {T} is outside the valid range [0, 10.0].")

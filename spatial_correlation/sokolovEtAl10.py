@@ -13,7 +13,7 @@ https://doi.org/10.3319/TAO.2010.05.03.01(T)
 
 import numpy as np
 
-def SpatialcorrS10(h):
+def SpatialCorrS10(h):
     """
     The parameters a and b are selected from Table 5 correspondent 
     to 'all data' after the correction.

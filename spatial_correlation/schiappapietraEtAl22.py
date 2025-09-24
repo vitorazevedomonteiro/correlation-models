@@ -13,7 +13,7 @@ Bulletin of Earthquake Engineering, 20(11), 5747–5773. https://doi.org/10.1007
 
 import numpy as np
 
-def SpatialcorrS22_N(T, h): # north region
+def SpatialCorrS22_N(T, h): # north region
     # for PGA use T=0
     if T <= 0.55:
         b = 27.48 - 52.20 * (T-0.55)
@@ -22,7 +22,7 @@ def SpatialcorrS22_N(T, h): # north region
     
     return np.exp(-(3*h)/b)
 
-def SpatialcorrS22_C(T, h): # center region
+def SpatialCorrS22_C(T, h): # center region
     # for PGA use T=0
     
     if T <= 1.0:
@@ -32,7 +32,7 @@ def SpatialcorrS22_C(T, h): # center region
     
     return np.exp(-(3*h)/b)
 
-def SpatialcorrS22_S(T, h): # south region
+def SpatialCorrS22_S(T, h): # south region
     # for PGA use T=0
     
     b = 23.25 - 5.44 * T
