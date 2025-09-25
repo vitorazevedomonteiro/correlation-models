@@ -13,7 +13,7 @@ https://doi.org/10.1785/0120130061
 
 import numpy as np
 
-def SpatialCrossCorrWD13(T1, T2, h, Rvs30):
+def CrossSpatialCorrWD13(T1, T2, h, Rvs30):
 
     # Validate inputs
     if T1 < 0.01 or T2 < 0.01:
