@@ -71,7 +71,7 @@ def SpatialCrossCorrGA09(t1, t2, h):
         raise ValueError(f"t1 = {t2} is outside the valid range ]0, 5.0].")
     
     t_max = max(t1, t2)
-    rho = corrBC06xy(t1, t2) * SpatialCorrGA09(h, t_max)
+    rho = corrBC06xy(t1, t2) * SpatialcorrGA09(t_max, h)
 
     return rho
 
