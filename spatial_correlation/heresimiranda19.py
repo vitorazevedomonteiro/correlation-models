@@ -11,7 +11,6 @@ Bulletin of Earthquake Engineering, 17(3), 1099–1115. https://doi.org/10.1007/
 """
 
 import numpy as np
-from openquake.hazardlib.correlation import hmcorrelation
 
 def SpatialCorrHM19(T, h, uncertainty=0):
     # use T=0 for PGA
