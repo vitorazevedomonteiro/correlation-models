@@ -13,7 +13,7 @@ Earthquake Engineering & Structural Dynamics, 42(3), 397–417. https://doi.org/
 
 import numpy as np
 
-def SpatialCrossCorrLB13(T1, T2, h):
+def CrossSpatialCorrLB13(T1, T2, h):
     # Verify validity of input arguments
     if min(T1, T2) < 0.01:
         raise ValueError('The periods must be greater or equal to 0.01s')
