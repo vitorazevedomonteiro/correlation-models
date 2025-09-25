@@ -63,7 +63,7 @@ def corrBC06xy(T_a, T_b):
     return rho 
 
 
-def SpatialCrossCorrGA09(t1, t2, h):
+def CrossSpatialCorrGA09(t1, t2, h):
     
     if not (0.0 < t1 <= 5.0):
         raise ValueError(f"t1 = {t1} is outside the valid range ]0, 5.0].")
