@@ -7,7 +7,7 @@ from .duwang13 import SpatialCorrDW13
 from .espositoiervolino11 import SpatialCorrEI11
 from .espositoiervolino12 import SpatialCorrEI12
 from .godaatkinson09 import SpatialCorrGA09, CrossSpatialCorrGA09
-from .godahong08 import SpatialCorrGH08_SA, CrossSpatialGH08_PGA, CrossSpatialCorrGH08
+from .godahong08 import SpatialCorrGH08_SA, SpatialCorrGH08_PGA, CrossSpatialCorrGH08
 from .heresimiranda19 import SpatialCorrHM19
 from .jayarambaker09 import SpatialCorrJB09
 from .lothbaker13 import CrossSpatialCorrLB13
