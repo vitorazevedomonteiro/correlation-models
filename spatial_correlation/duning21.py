@@ -110,7 +110,7 @@ def get_pc(label):
 
 
 
-def   CrossSpatialCorrDN21(IM1, IM2, h):
+def CrossSpatialCorrDN21(IM1, IM2, h):
     # Interpolated PCs
     pc1 = get_pc(IM1)
     pc2 = get_pc(IM2)
