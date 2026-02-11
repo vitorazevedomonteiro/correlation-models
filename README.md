@@ -5,7 +5,7 @@ Citations of each model are provided directly within the scripts and are also li
 For a more detailed review of the ground motion correlation modelling for regional seismic risk analysis please see the paper cited below:
 
 # Reference
-Monteiro, V.A. and O’Reilly, G.J. (2025) ‘A critical review of ground motion correlation modelling for regional seismic risk analysis’, (Under review)
+Monteiro, V.A., O’Reilly, G.J. A review of ground motion correlation modelling for regional seismic risk analysis. Bull Earthquake Eng (2026). https://doi.org/10.1007/s10518-026-02377-0
 
 # How to use
 Use "get_correlation.py" to get non-spatial correlation coefficients from several models. Inside you can find two simple example of how to use it.
